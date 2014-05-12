@@ -5,9 +5,9 @@
 # Install NTP configuration file
 cookbook_file "/etc/ntp.conf" do
   source "ntp.conf"
+  owner "root"
+  group "root"
   mode 0644
-  owner root
-  group root
 end
 
 # Enable and restart NTP service
