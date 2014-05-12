@@ -3,8 +3,7 @@
 # NTP server configuration
 
 # Install NTP configuration file
-remote_file "/etc/ntp.conf" do
-  action :create
+cookbook_file "/etc/ntp.conf" do
   source "ntp.conf"
   mode 0644
   owner root
