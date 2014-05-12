@@ -3,6 +3,14 @@
 # NTP server configuration
 
 # Install NTP configuration file
+cookbook_file "/tmp/ntp.cookbook" do
+  owner "root"
+  group "root"
+  mode 0644
+  action :create
+end
+
+# Install NTP configuration file
 cookbook_file "/etc/ntp.conf" do
   source "ntp.conf"
   owner "root"
