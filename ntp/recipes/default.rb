@@ -16,6 +16,7 @@ cookbook_file "/etc/ntp.conf" do
   owner "root"
   group "root"
   mode 0644
+  action :create
 end
 
 # Enable and restart NTP service
